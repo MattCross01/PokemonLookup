@@ -1,0 +1,23 @@
+{
+  "name": "Project_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattCross01/PokemonLookup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattCross01/PokemonLookup/issues"
+  },
+  "homepage": "https://github.com/MattCross01/PokemonLookup#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
