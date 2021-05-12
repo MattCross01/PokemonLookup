@@ -2,7 +2,7 @@ const sequelize = require('../config/connection');
 const { Pokemon } = require('../models');
 
 const pokemonSeedData = require('./pokemonSeedData.json');
-const bookSeedData = require('./bookSeedData.json');
+const pokemonData = require('./PokemonData.js');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });

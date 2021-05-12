@@ -38,8 +38,8 @@ Pokemon.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'book'
+    modelName: 'pokemon'
   }
 );
 
-module.exports = Book;
+module.exports = Pokemon;
