@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const seedPokemon = require('../seeds/pokemon-seeds');
 
 class Pokemon extends Model {}
 
@@ -7,32 +8,25 @@ Pokemon.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.STRING
     },
     type: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.STRING
     },
     hp: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.STRING
     },
     attack: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+      type: DataTypes.INTEGER
     },
     defense: {
-      type: DataTypes.INTEGER,
-      defaultValue: 1
-      },
+      type: DataTypes.INTEGER
     },
-
+  },
   {
     sequelize,
     timestamps: false,
@@ -42,4 +36,4 @@ Pokemon.init(
   }
 );
 
-module.exports = Pokemon;
+module.exports = seedPokemon;
