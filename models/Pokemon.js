@@ -8,6 +8,7 @@ Pokemon.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
@@ -36,4 +37,4 @@ Pokemon.init(
   }
 );
 
-module.exports = seedPokemon;
+module.exports = Pokemon;
