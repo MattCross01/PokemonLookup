@@ -20,4 +20,4 @@ function getPokemon(choose) {
         console.error(err);
       });
 };
-//this is a test to push
+//this is a test
