@@ -1,6 +1,5 @@
 const User = require('./User');
 const Pokemon = require('./Pokemon');
-const Painting = require('./Painting');
 
 //Gallery.hasMany(Pokemon, {
   //foreignKey: 'gallery_id',
