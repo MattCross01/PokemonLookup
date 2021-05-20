@@ -1,13 +1,12 @@
 const User = require('./User');
-const Pokemon = require('./savedPokemon');
+const Pokemon = require('./Pokemon');
 
-User.hasMany(Pokemon, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
-});
+//Gallery.hasMany(Pokemon, {
+  //foreignKey: 'gallery_id',
+//});
 
-Pokemon.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+//Pokemon.belongsTo(Gallery, {
+//  foreignKey: 'gallery_id',
+//});
 
 module.exports = { User, Pokemon };
