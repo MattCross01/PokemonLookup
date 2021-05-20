@@ -1,14 +1,28 @@
-<!-- This template includes hardcoded data. In future lessons, you will be rendering data dynamically. -->
-<div class="pokemon-container">
+!-- This template includes hardcoded data. In future lessons, you will be rendering data dynamically. -->
+<div class="menu-container">
   <div class="card-header col-md-10">
     <h2>
-      &#Pokemon Roster
+      &#127869 Current Menu
     </h2>
   </div>
+<<<<<<< HEAD
    {{#each pokemon as |pokemon|}}
   <!-- For each pokemon in the array of pokemon objects, the following <div> will be rendered. -->
     <div class="pokemon col-md-5">
       <!-- We use pokemon.id instead of <od> and <li> elements. -->
+=======
+<div class="menu-container">
+  <div class="card-header col-md-10">
+    <h2>
+      &#127869 Current Menu
+    </h2>
+  </div>
+  <!-- We implement the built-in helper, #each. This helper will iterate over dishes -->
+  {{#each Pokemon as |Pokemon|}}
+  <!-- For each dish in the array of dish objects, the following <div> will be rendered. -->
+    <div class="dish col-md-5">
+      <!-- We use dish.id instead of <od> and <li> elements. -->
+>>>>>>> 3d9789527a11e34c36b6afbb357617490bd15c2f
       <p>
         {{pokemon.id}}.
         {{pokemon.pokemon_name}}
@@ -23,10 +37,11 @@
   {{/each}}
 </div>
 
-    <div>
+
+  {{#each pokemon as |pokemon|}}
       <ol>
         <li>
-         Bulbasaur
+          Bulbasaur
         </li>
         <li>
           Charmander
@@ -44,7 +59,7 @@
           Totadile
         </li>
         <li>
-          ChiKorita 
+          Chikorita
         </li>
       </ol>
     </div>
