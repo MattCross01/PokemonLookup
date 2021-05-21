@@ -1,22 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Pokemon Party</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="public\css\style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Lookup!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./css/jass.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+  <div>
+    <header>
       <h1>
-        &#127881 Pokemon Party! &#127881
+        <a href="/">Pokemon Lookup!</a>
       </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
     </header>
-      <main class="container container-fluid mt-5">
-      
-     {{{ body }}}
-      </main>
-  </div>
-  </body>
+ 
+ <div class="row">
+        <a id="bulbasaur" href="https://pokemondb.net/pokedex/bulbasaur"><img src="https://cdn2.bulbagarden.net/upload/2/21/001Bulbasaur.png" width="250"><audio src="Pokemon Audio/bulbasaur.mp3" id="bulbasauraudio"></audio></a>
+       <a href="https://pokemondb.net/pokedex/charmander"><img src="https://cdn2.bulbagarden.net/upload/7/73/004Charmander.png" width="250"></a>
+       <a href="https://pokemondb.net/pokedex/squirtle"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png" width="250"></a>
+       <a href="https://pokemondb.net/pokedex/pikachu"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" width="250" target="_blank"></a>
+       <a href="https://pokemondb.net/pokedex/eevee"><img src="https://cdn2.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" width="250" target="_blank"></a>
+       <a href="https://pokemondb.net/pokedex/hitmonlee"><img src="http://static.pokemonpets.com/images/monsters-images-800-800/106-Hitmonlee.png" width="250" target="_blank"></a>
+       <a href="https://pokemondb.net/pokedex/hitmonchan"><img src="https://cdn2.bulbagarden.net/upload/a/a3/107Hitmonchan.png" width="250"></a>
+       <a href="https://pokemondb.net/pokedex/moltres"><img src="https://swordshield.pokemon.com/assets/img/articles/ex/pokemon_moltres_2x.png" width="250"></a>
+       <a href="https://pokemondb.net/pokedex/zapdos"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c32d.png" width="250"></a>
+       <a href="https://pokemondb.net/pokedex/articuno"><img src="https://cdn2.bulbagarden.net/upload/thumb/4/4e/144Articuno.png/1200px-144Articuno.png" width="250"></a>
+      </div>
+    </div>
+    
+    <main>
+      {{{ body }}}
+    </main>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
 
 </html>
