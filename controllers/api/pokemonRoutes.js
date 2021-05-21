@@ -5,7 +5,7 @@ const { Pokemon } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findAll({
-      include: [{ model: Pokemon }],
+      
     });
     res.status(200).json(pokemonData);
   } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const pokemonData = await Pokemon.findByPk(req.params.id, {
-      include: [{ model: Pokemon }],
+      
     });
 
     if (!pokemonData) {
