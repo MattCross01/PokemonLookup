@@ -21,7 +21,7 @@
            <th><abbr title="saveToRoster">Save To Roster</abbr></th>
         </tr>
     </tfoot>
-    {{#each pokemon as |pokemon| }}
+    {{#each pokemons as |pokemon| }}
     <tbody>
         <tr>
             <th>{{pokemon.id}}</th>
@@ -33,6 +33,7 @@
             <th><button id="addToRoster">Add</button></th>
         </tr>
     </tbody>
+    {{/each}}
 </table>
 
-<script src="public/js/homepage.js"></script>
+{{!-- <script src="public/js/homepage.js"></script> --}}
