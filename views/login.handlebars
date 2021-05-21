@@ -1,0 +1,88 @@
+<h2 class="display-7">Login</h2>
+
+<form class="form login-form">
+  <div class="form-group">
+    <label class="display-7" for="display_name">Name</label>
+    <input class="form-input" type="text" id="display_name" />
+  </div>
+  <div class="form-group">
+    <label class="display-7" for="password-login">Password</label>
+    <input class="form-input" type="password" id="password-login" />
+  </div>
+  <div class="form-group">
+    <button class="btn alert-dark" type="submit">login</button>
+    <a>Don't have an account?</a>
+        <a href="/signup" class="btn alert-dark" id="signupBtn">Sign Up</a>
+  </div>
+    <div class="form-group text-center">
+      </div> 
+</form>
+
+<script src="/js/login.js"></script>
+[6:55 PM]
+<form class="form signup-form">
+  <div class="form-group">
+    <label class="display-7" for="name">Name:</label>
+    <input class="form-input" type="name" id="name" />
+  </div>
+  <div class="form-group">
+    <label class="display-7" for="email-login">Email:</label>
+    <input class="form-input" type="text" id="signup-email" />
+  </div>
+  <div class="form-group">
+    <label class="display-7" for="password-login">Password:</label>
+    <input class="form-input" type="password" id="signup-pw" />
+  </div>
+  <div class="form-group">
+    <button class="btn alert-dark" type="submit" id="signupbtn">Sign Up</button>
+  </div>
+
+</form>
+
+<script src="/js/signup.js"></script>
+[6:55 PM]
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{ user.displayName }}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Post:</h3>
+
+    <form class="form new-post-form">
+      <div class="form-group">
+        <label for="post-name">post name:</label>
+        <input class="form-input" type="text" id="post-name" name="post-name" />
+      </div>
+      <div class="form-group">
+        <label for="post-desc">description:</label>
+        <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if user.posts.length}}
+  <div class="col-md-6 post-list">
+    <h3>Current Posts:</h3>
+
+    {{#each user.posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+        <p>{{post.description}}</p>
+      </div>
+      <div class="col-md-4">
+        <button id= "deleteBtn" class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
