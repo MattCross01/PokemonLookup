@@ -34,33 +34,42 @@
     </div>
     <div id="contact">
       <h2 class="header2">Which is your favorite?</h2>
-      <p>Pick your favorite pokemon.</p
-      <select>
-        <option selected disabled>Select One</option>
-        <option id="bulbasaur">Bulbasaur</option>
-        <option id="charmander">Charmander</option>
-        <option id="squirtle">Squirtle</option>
-        <option id="pikachu">Pikachu</option>
-        <option id="evee">Evee</option>
-        <option id="hitmonlee">Hitmonlee</option>
-        <option id="hitmonchan">Hitmonchan</option>
-        <option id="moltres">Moltres</option>
-        <option id="zapdos">Zapdos</option>
-        <option id="articuno">Articuno</option>
-      </select>
-      <span class="goButton">Go!</span>
-    
+      <p>Pick your favorite pokemon.</p>
+
       <div class="topnav" id="">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <input type="text" placeholder="Search..">
-    </div>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+        <button id="save" class="btn btn-primary">Save</button>
+      </div>
      
-    <div class="contactNavi">
+      <div class="contactNavi">
       <a href="https://i.imgur.com/YKKxl93.jpg" target="_blank"><img src="https://i.imgur.com/YKKxl93.jpg"  width="60"></a>
       <a href="https://pokemondb.net/pokedex/all" target="_blank"><img src="https://i.pinimg.com/originals/fe/d0/e0/fed0e01d0357d5eb80b2c5082411bc92.png" width="60"></a>
       
      </div>
-     <script src="audio.js"></script>
+     <script src="audio.js">
+       
+        $(document).ready(function() {
+            var audioElement = document.getElementById('bulbasauraudio');
+            audioElement.setAttribute('src', 'bulbasaur.mp3');
+            audioElement.setAttribute('autoplay', 'autoplay');
+            //audioElement.load()
+
+            $.get();
+
+            audioElement.addEventListener("load", function() {
+                audioElement.play();
+            }, true);
+
+            $('.play').click(function() {
+                audioElement.play();
+            });
+
+            $('.pause').click(function() {
+                audioElement.pause();
+            });
+        });
+     </script>
    </div
