@@ -1,0 +1,38 @@
+<table class="table is-bordered is-hoverable is-fullwidth is-centered">
+    <thead>
+        <tr>
+           <th><abbr title="id">PokeID</abbr></th>
+           <th><abbr title="pokemonName">Pokemon</abbr></th>
+           <th><abbr title="type">Type</abbr></th>
+           <th><abbr title="hitpoints">HP</abbr></th>
+           <th><abbr title="attack">ATK</abbr></th>
+           <th><abbr title="defense">DEF</abbr></th>
+           <th><abbr title="saveToRoster">Save To Roster</abbr></th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+           <th><abbr title="id">PokeID</abbr></th>
+           <th><abbr title="pokemonName">Pokemon</abbr></th>
+           <th><abbr title="type">Type</abbr></th>
+           <th><abbr title="hitpoints">HP</abbr></th>
+           <th><abbr title="attack">ATK</abbr></th>
+           <th><abbr title="defense">DEF</abbr></th>
+           <th><abbr title="saveToRoster">Save To Roster</abbr></th>
+        </tr>
+    </tfoot>
+    {{#each pokemon as |pokemon| }}
+    <tbody>
+        <tr>
+            <th>{{pokemon.id}}</th>
+            <th>{{pokemon.name}}</th>
+            <th>{{pokemon.type}}</th>
+            <th>{{pokemon.hp}}</th>
+            <th>{{pokemon.attack}}</th>
+            <th>{{pokemon.defense}}</th>
+            <th><button id="addToRoster">Add</button></th>
+        </tr>
+    </tbody>
+</table>
+
+<script src="public/js/homepage.js"></script>
