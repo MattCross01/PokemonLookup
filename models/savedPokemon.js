@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+class Pokemon extends Model {}
 
-class User extends Model {}
-
-User.init(
+Pokemon.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,23 +11,23 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    description: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
     },
-    password: {
-      type: DataTypes.STRING,
+    date_created: {
+      type: DataTypes.DATE,
       allowNull: false,
-      validate: {
-        len: [8],
+      defaultValue: DataTypes.NOW,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
       },
     },
   },
@@ -37,8 +36,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'pokemon',
   }
 );
 
-module.exports = User;
+module.exports = Pokemon;
