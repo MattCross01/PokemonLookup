@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Pokemon } = require('../../models');
-
+// test
 // GET all pokemon
 router.get('/', async (req, res) => {
   try {
@@ -30,7 +30,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // CREATE a Pokemon
 router.post('/', async (req, res) => {
