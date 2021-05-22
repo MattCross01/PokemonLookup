@@ -1,0 +1,33 @@
+body {
+  background-color: #029A81;
+  margin: 0%;
+}
+
+#portfolio {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+}
+
+.aboutImg {
+  padding-left: 5%;
+  width: 100%;
+}
+
+.pokemon-ball {
+  border: 3px solid white  ;
+  border-radius: 50%;
+}
+
+#aboutInfo {
+  padding-left: 2%;
+}
+
+#profileButtons {
+  padding-right: 2%;
+}
+
+#pokeTitle {
+  padding-left: 1%;
+  padding-top: 1%;
+}
