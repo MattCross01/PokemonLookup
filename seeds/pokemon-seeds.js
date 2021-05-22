@@ -1201,6 +1201,22 @@ const pokemonData = [
     attack: "70",
     defense: "65"
   },
+  {
+    id: 151,
+    name: "1st Post",
+    type: "Water",
+    hp: "90",
+    attack: "70",
+    defense: "65"
+  },
+  {
+    id: 152,
+    name: "Test Pokemon",
+    type: "Pokemon",
+    hp: "80",
+    attack: "60",
+    defense: "55"
+  },
 ]
 
 const seedPokemon = () => Pokemon.bulkCreate(pokemonData);
