@@ -34,7 +34,9 @@ router.post('/', async (req,res) => {
 
 // checking login credentials
 router.post('/login', async (req, res) => {
-    try {
+  console.log("hit the correct login route")  
+  try {
+      console.log(req.body)
       const userData = await User.findOne({ where: { email: req.body.email } });
   
       if (!userData) {
@@ -61,6 +63,7 @@ router.post('/login', async (req, res) => {
       });
   
     } catch (err) {
+      console.log(err)
       res.status(400).json(err);
     }
   });
