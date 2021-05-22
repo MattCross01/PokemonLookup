@@ -13,18 +13,44 @@
 <body>
   <div>
     <header>
-      <h1>
-        <a href="/">Pokemon Lookup!</a>
-      </h1>
-      <nav>
+      <p class='is-size-1 has-text-weight-semi-bold'>
+        <a href="/" class='has-text-danger' id='pokeTitle'>Pokemon Lookup!</a>
+      </p>
+      <nav class='level-right' id='profileButtons'>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile" id='profile'>profile</a> |
+        <button class="no-button has-text-white" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login" class='has-text-white' id='login'>login</a>
         {{/if}}
       </nav>
+
+      <section class='level'>
+        <div class='aboutImg'>
+          <img src="http://www.pngmart.com/files/2/Pokeball-PNG-Image.png" class="pokemon-ball" width="300">
+        </div>
+        <div id='aboutInfo'>
+         <h1 class="headerOne has-text-danger">All About Pokemon</h1>
+         <p class="headerP has-text-white">Pokémon (ポケモン Pokemon?, Japanese pronunciation: ['pokemoɴ]; /ˈpoʊkeɪˌmɒn/ or /ˈpoʊkᵻˌmɒn/ - poh-kay-mon or poh-ki-mon)[1][2] is a media franchise managed by The Pokémon Company, a Japanese consortium between Nintendo, Game Freak, and Creatures.[3] The franchise copyright is shared by all three companies, but Nintendo is the sole owner of the trademark.[4] The franchise was created by Satoshi Tajiri in 1995,[5] and is centered on fictional creatures called "Pokémon", which humans, known as Pokémon Trainers, catch and train to battle each other for sport. <a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon" target="_blank">Source</a></p>
+        </div>
+      </section>
+
+        <div id="portfolio">
+          <div class="level">
+            <a id="bulbasaur" href="https://pokemondb.net/pokedex/bulbasaur"><img src="https://cdn2.bulbagarden.net/upload/2/21/001Bulbasaur.png" width="250"><audio src="Pokemon Audio/bulbasaur.mp3" id="bulbasauraudio"></audio></a>
+            <a href="https://pokemondb.net/pokedex/charmander"><img src="https://cdn2.bulbagarden.net/upload/7/73/004Charmander.png" width="250"></a>
+            <a href="https://pokemondb.net/pokedex/squirtle"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png" width="250"></a>
+            <a href="https://pokemondb.net/pokedex/pikachu"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" width="250" target="_blank"></a>
+            <a href="https://pokemondb.net/pokedex/eevee"><img src="https://cdn2.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" width="250" target="_blank"></a>
+            <a href="https://pokemondb.net/pokedex/hitmonlee"><img src="http://static.pokemonpets.com/images/monsters-images-800-800/106-Hitmonlee.png" width="250" target="_blank"></a>
+            <a href="https://pokemondb.net/pokedex/hitmonchan"><img src="https://cdn2.bulbagarden.net/upload/a/a3/107Hitmonchan.png" width="250"></a>
+            <a href="https://pokemondb.net/pokedex/moltres"><img src="https://swordshield.pokemon.com/assets/img/articles/ex/pokemon_moltres_2x.png" width="250"></a>
+            <a href="https://pokemondb.net/pokedex/zapdos"><img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c32d.png" width="250"></a>
+            <a href="https://pokemondb.net/pokedex/articuno"><img src="https://cdn2.bulbagarden.net/upload/thumb/4/4e/144Articuno.png/1200px-144Articuno.png" width="250"></a>
+          </div>
+        </div>
+
     </header>
 
     <main>

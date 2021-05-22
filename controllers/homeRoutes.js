@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Pokemon } = require('../models');
+const { User, Pokemon, Roster } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,6 +27,25 @@ router.get('/login', (req, res) => {
     }
   
     res.render('login');
+});
+
+// withAuth
+router.get('/profile', async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: Roster, Pokemon }],
+        });
+
+        const user = userData.get(({ plain: true }));
+
+        res.render('profile', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 

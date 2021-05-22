@@ -32,7 +32,7 @@ Roster.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'roster',
-      }
-)
+    }
+);
 
 module.exports = Roster;
