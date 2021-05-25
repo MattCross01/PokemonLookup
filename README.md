@@ -2,7 +2,7 @@
 
 MIT<br>[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* [Live Application Demo](https://thepokemonproject.herokuapp.com/)
+* [Live Application Demo](https://thepokemonlookupproject.herokuapp.com/)
 
 ## Overview
 
